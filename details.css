@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Very-Light-Gray);
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Start container */
+p {
+    color: var(--Grayish-Blue);
+}
+.container h1:first-child {
+    font-weight: 200; 
+}
+h1 {
+    color: var(--Very-Dark-Blue);
+    text-align: center;
+}
+.container p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 540px;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+@media (max-width: 992px) {
+    .container {
+        font-size: 14px;
+    }
+    .container p {
+        width: 300px;
+    }
+}
+/* end container */
+/* Start Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+}   
+.cards img {
+    position: relative;
+    top: 20%;
+    left: 82%;
+}
+.cards p {
+    line-height: 1.7;
+}
+@media (max-width: 767px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .supervisor, .calculator {
+        margin-top: -34%;
+    }
+}
+.cards .karma {
+    grid-area: 3 / 2 / 2 / 3;
+}
+.cards .supervisor, .team-builder, .karma, .calculator {
+    background-color: white;
+    padding: 25px;
+    width: 390px;
+    height: 260px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 17px 0 var(--Grayish-Blue);
+}
+.cards h2 {
+    margin-bottom: 15px;
+}
+.supervisor {
+    border-top: 5px solid var(--Cyan);
+    position: relative;
+    top: 47%;
+}
+.team-builder {
+    border-top: 5px solid var(--Red);
+}
+.calculator {
+    border-top: 5px solid var(--Blue);
+    position: relative;
+    top: 47%;
+}
+.karma {
+    border-top: 5px solid var(--Orange);
+}
+/* End Cards */

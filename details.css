@@ -79,7 +79,7 @@ h1 {
         grid-template-rows: repeat(2, 1fr);
     }
     .supervisor, .calculator {
-        margin-top: -34%;
+        margin-top: -123px;
     }
 }
 .cards .karma {
